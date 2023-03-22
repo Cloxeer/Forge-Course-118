@@ -32,6 +32,9 @@ public class DowsingRodItem extends Item {
                 }
             }
 
+
+            //Here the error occurred
+            //found other method for sendMessage doing displayClientMessage don't know if it works or not UUID doesn't
             if(!foundBlock) {
                 player.sendMessage(new TranslatableComponent("item.mccourse.dowsing_rod.no_valuables"),
                         player.getUUID());
@@ -43,7 +46,7 @@ public class DowsingRodItem extends Item {
 
         return super.useOn(pContext);
     }
-
+    //Here the error occurred
     private void outputValuableCoordinates(BlockPos blockPos, Player player, Block blockBelow) {
         player.sendMessage(new TextComponent("Found " + blockBelow.asItem().getRegistryName().toString() + " at " +
                 "(" + blockPos.getX() + ", " + blockPos.getY() + "," + blockPos.getZ() + ")"), player.getUUID());
