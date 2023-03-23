@@ -12,6 +12,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sebastian.mccourse.MCCourseMod;
+import net.sebastian.mccourse.block.custom.SpeedyBlock;
+import net.sebastian.mccourse.item.custom.CoalSilverItem;
 import net.sebastian.mccourse.item.custom.DowsingRodItem;
 
 public class ModItems {
@@ -20,6 +22,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> SAD_KAYLA_INGOT = ITEMS.register("sad_kayla_ingot",
             () -> new Item(new Item.Properties().food(Foods.CARROT).tab(CreativeModeTab.TAB_FOOD)));
+
+    public static final RegistryObject<Item> KAYLA_POTATO = ITEMS.register("kayla_potato",
+            () -> new Item(new Item.Properties().food(Foods.POTATO).tab(CreativeModeTab.TAB_FOOD)));
 
     public static final RegistryObject<Item> HASTE_APPLE = ITEMS.register("haste_apple",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD)
@@ -36,7 +41,15 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static final RegistryObject<Item> DOWSING_ROD = ITEMS.register("dowsing_rod",
-            () -> new DowsingRodItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
+            () -> new DowsingRodItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).durability(16)));
+
+    public static final RegistryObject<Item> COAL_SILVER = ITEMS.register("coal_silver",
+            () -> new CoalSilverItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).durability(16)));
+
+    public static final RegistryObject<Item> TURNIP = ITEMS.register("turnip",
+            () -> new CoalSilverItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).food(ModFoods.TURNIP)));
+
+
 
 
 
